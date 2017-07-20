@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <unordered_map>
+#include <cmath>
+
+//#include <gmp.h>
+
+namespace dark {
+typedef bool boolean;
+typedef unsigned int unsigned_integer;
+typedef int integer;
+typedef double number;
+//typedef ... gmp_integer;
+typedef std::string string;
+typedef char character;
+
+template<typename T>
+inline auto sin(T x) -> decltype(x) { return std::sin(x); }
+template<typename T>
+inline auto cos(T x) -> decltype(x) { return std::cos(x); }
+template<typename T>
+inline auto tan(T x) -> decltype(x) { return std::tan(x); }
+template<typename T>
+inline auto log(T x) -> decltype(x) { return std::log(x); }
+template<typename T>
+inline auto exp(T x) -> decltype(x) { return std::exp(x); }
+
+
+}
+
