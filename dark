@@ -8,35 +8,34 @@
 //#include <gmp.h>
 
 namespace dark {
-typedef bool boolean;
-typedef unsigned int unsigned_integer;
-typedef int integer;
-typedef double number;
-//typedef ... gmp_integer;
-typedef std::string string;
-typedef char character;
+	typedef bool boolean;
+	typedef unsigned int unsigned_integer;
+	typedef int integer;
+	typedef double number;
+	//typedef ... gmp_integer;
+	typedef std::string string;
+	typedef char character;
 
-template<typename T>
-inline auto abs(T x) -> decltype(x) { return std::abs(x); }
-template<typename T>
-inline auto sin(T x) -> decltype(x) { return std::sin(x); }
-template<typename T>
-inline auto cos(T x) -> decltype(x) { return std::cos(x); }
-template<typename T>
-inline auto tan(T x) -> decltype(x) { return std::tan(x); }
-template<typename T>
-inline auto log(T x) -> decltype(x) { return std::log(x); }
-template<typename T>
-inline auto exp(T x) -> decltype(x) { return std::exp(x); }
+	template<typename T>
+		inline auto abs(T x) -> decltype(x) { return std::abs(x); }
+	template<typename T>
+		inline auto sin(T x) -> decltype(x) { return std::sin(x); }
+	template<typename T>
+		inline auto cos(T x) -> decltype(x) { return std::cos(x); }
+	template<typename T>
+		inline auto tan(T x) -> decltype(x) { return std::tan(x); }
+	template<typename T>
+		inline auto log(T x) -> decltype(x) { return std::log(x); }
+	template<typename T>
+		inline auto exp(T x) -> decltype(x) { return std::exp(x); }
 
 
-integer print() { return 0; }
-template<typename H, typename... Args>
-integer print(H h, Args... a) {
-	std::cout << h;
-	print(a...);
-	return 0;
-}
-
+	integer print() { return 0; }
+	template<typename H, typename... Args>
+		integer print(H h, Args... a) {
+			std::cout << h;
+			print(a...);
+			return 0;
+		}
 }
 

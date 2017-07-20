@@ -1,24 +1,21 @@
 #include "dark"
 
 namespace dark {
-integer print() { return 0; }
+	void exit(integer i) { std::exit(i); }
 
-template<typename H, typename... Args>
-integer print(H h, Args... a) {
-	std::cout << h;
-	print(a...);
-	return 0;
-}
 }
 
 int main() {
-    dark::number x = 55.3;
-    dark::integer y = 123;
+	dark::number x = 55.3;
+	dark::integer y = 123;
+	dark::integer z = -888;
+	dark::string s = "dark";
 
-    //std::cout << "dark" << std::endl;
-    dark::print(x, "dark");
-    dark::print(y);
+	dark::print(x, s, "mako");
+	dark::print(y);
+	dark::print(dark::abs(z));
 
-    return 0;
+	dark::exit(0);
+	return 0;
 }
 
