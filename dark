@@ -3,6 +3,7 @@
 #include <vector>
 #include <unordered_map>
 #include <cmath>
+#include <cstdlib>
 
 //#include <gmp.h>
 
@@ -16,6 +17,8 @@ typedef std::string string;
 typedef char character;
 
 template<typename T>
+inline auto abs(T x) -> decltype(x) { return std::abs(x); }
+template<typename T>
 inline auto sin(T x) -> decltype(x) { return std::sin(x); }
 template<typename T>
 inline auto cos(T x) -> decltype(x) { return std::cos(x); }
@@ -26,6 +29,14 @@ inline auto log(T x) -> decltype(x) { return std::log(x); }
 template<typename T>
 inline auto exp(T x) -> decltype(x) { return std::exp(x); }
 
+
+integer print() { return 0; }
+template<typename H, typename... Args>
+integer print(H h, Args... a) {
+	std::cout << h;
+	print(a...);
+	return 0;
+}
 
 }
 
